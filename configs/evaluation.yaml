@@ -1,0 +1,21 @@
+mlflow:
+  tracking_uri: "http://localhost:5000"
+  experiment_name: "llm-eval-pipeline"
+
+model:
+  name: "gpt-neo-125m"
+  hf_model_id: "EleutherAI/gpt-neo-125M"
+
+evaluation:
+  batch_size: 8
+  max_examples: 200
+  metrics:
+    - deepeval
+    - ragas
+
+feedback:
+  feedback_store: "data/feedback.jsonl"
+  min_rating_for_retrain: 3
+
+alignment:
+  failures_output: "data/failures.jsonl"

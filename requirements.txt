@@ -1,0 +1,12 @@
+pyyaml
+mlflow
+gradio
+transformers
+datasets
+torch
+accelerate
+sentence-transformers
+peft
+# optional / hypothetical evaluation packages (replace with actual names if available)
+deepeval
+ragas
